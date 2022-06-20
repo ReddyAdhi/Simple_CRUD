@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{% block title %}Simple CRUD{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <h4><a href="{% url 'home' %}">Home</a></h4>
+            <ul>
+                <li><h5><a href="{% url 'create' %}">Create</a></h5></li>
+                <li><h5><a href="{% url 'read' %}">Read</a></h5></li>
+                <li><h5><a href="{% url 'update' %}">Update</a></h5></li>
+                <li><h5><a href="{% url 'delete' %}">Delete</a></h5></li>
+            </ul>
+            <hr />
+        </header>
+        {% block content %}{% endblock content %}
+    </body>
+</html>
